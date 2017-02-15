@@ -134,8 +134,8 @@ class Game:
                     while new_col >= 0 and self.field[row][new_col] is None:
                         new_col -= 1
 
-                    if new_col == self.size:
-                        self.field[row][self.size + 1] = self.field[row][col]
+                    if new_col == -1:
+                        self.field[row][new_col + 1] = self.field[row][col]
                         self.field[row][col] = None
                     elif self.field[row][new_col] == self.field[row][col]:
                         self.field[row][new_col] *= 2
